@@ -1,7 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 from rxconfig import config
-
+from Foodify_La_hacks.model import get_intial_request
 import reflex as rx
 
 # from chatapp import style
@@ -15,7 +15,7 @@ class State(rx.State):
 
     def answer(self):
         # Our chatbot is not very smart right now...
-        answer = "I don't know!"
+        answer = get_intial_request(self.question)
         self.chat_history.append((self.question, answer))
 
 
