@@ -42,7 +42,10 @@ answer_style = message_style | dict(
 
 # Styles for the action bar.
 input_style = dict(
-    border_width="1px", padding="1em", box_shadow=shadow
+    border_width="1px", 
+    padding="1em", 
+    box_shadow=shadow,
+
 )
 button_style = dict(
     background_color=rx.color("accent", 10),
