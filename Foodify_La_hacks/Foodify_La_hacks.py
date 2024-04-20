@@ -7,7 +7,16 @@ import reflex as rx
 # from chatapp import style
 
 class State(rx.State):
-    """The app state."""
+    # The current question being asked.
+    question: str
+
+    # Keep track of the chat history as a list of (question, answer) tuples.
+    chat_history: list[tuple[str, str]]
+
+    def answer(self):
+        # Our chatbot is not very smart right now...
+        answer = "I don't know!"
+        self.chat_history.append((self.question, answer))
 
 
 shadow = "rgba(0, 0, 0, 0.15) 0px 2px 8px"
