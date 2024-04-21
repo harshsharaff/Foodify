@@ -26,7 +26,7 @@ message_style = dict(
     border_radius="5px",
     margin_y="0.5em",
     box_shadow=shadow,
-    max_width="30em",
+    max_width="50em",
     display="inline-block",
 )
 
@@ -83,7 +83,7 @@ def action_bar() -> rx.Component:
             style=input_style,
         ),
         rx.button(
-            "Ask",
+            "Reply",
             on_click=State.answer,
             style=button_style,
         ),
@@ -96,7 +96,6 @@ def index() -> rx.Component:
             chat(),
             action_bar(),
             align="center",
-            bg ="red",
             height="100%"
         ),
         height="100vh",
