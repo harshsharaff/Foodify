@@ -96,7 +96,10 @@ def index() -> rx.Component:
             chat(),
             action_bar(),
             align="center",
-        )
+            bg ="red",
+            height="100%"
+        ),
+        height="100vh",
     )
 
 
