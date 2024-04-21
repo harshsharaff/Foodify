@@ -2,7 +2,7 @@ Foodify!
 Simplify your food search!
 This Google Gemini-powered chatbot streamlines recipe searches, offering personalized suggestions and tips.
 Easily navigate back and forth to explore diverse options, tailored to your tastes and dietary needs.
-Say hello to effortless culinary inspiration
+Say hello to effortless culinary inspiration!
 
 Features:
 
