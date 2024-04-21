@@ -39,6 +39,12 @@ answer_style = message_style | dict(
     background_color=rx.color("accent", 8),
 )
 
+heading_style = dict(
+    font_size="40px",
+    font_color=rx.color("purple", 8),
+    font_weight="bold",
+)
+
 # Styles for the action bar.
 input_style = dict(
     border_width="1px", 
@@ -90,17 +96,41 @@ def action_bar() -> rx.Component:
     )
 
 
-def index() -> rx.Component:
+def bot() -> rx.Component:
     return rx.center(
         rx.vstack(
             chat(),
             action_bar(),
             align="center",
-            height="100%"
+            height="100%",
         ),
+        
+    )
+
+def index() -> rx.Component:
+    return rx.vstack(
+        rx.text("Foodify! Simplify Food Search", style=heading_style),
+        rx.button("Open AI",
+        border_radius="1em",
+        box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
+        background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+        box_sizing="border-box",
+        color="white",
+        opacity=1,
+        on_click=rx.redirect(
+            "/bot"
+        ),
+        _hover={
+            "opacity": 0.5,},
+        ),
+        align="center",
+        background_color=rx.color("sand", 7),
         height="100vh",
+        padding_top="40vh"
+
     )
 
 
 app = rx.App()
 app.add_page(index)
+app.add_page(bot)
