@@ -14,7 +14,7 @@ class State(rx.State):
     chat_history: list[tuple[str, str]]
 
     def answer(self):
-        # Our chatbot is not very smart right now...
+        print(f'Question: {self.question}')
         answer = get_intial_request(self.question)
         self.chat_history.append((self.question, answer))
 
