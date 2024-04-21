@@ -14,6 +14,9 @@ Installation
 Clone the repository: git clone https://github.com/harshsharaff/Foodify.git
 Navigate to the project directory: cd project
 Install dependencies: pip install -r requirements.txt
+Set up enivironmental variables:
+- run the following command with your own google gemini api key
+  - export gemini_api_key=<gemini_key>
 Start the application: reflex init –> reflex run
 
 Usage
