@@ -14,7 +14,6 @@ class State(rx.State):
     chat_history: list[tuple[str, str]]
 
     def answer(self):
-        print(f'Question: {self.question}')
         answer = get_intial_request(self.question)
         self.chat_history.append((self.question, answer))
 
@@ -45,6 +44,7 @@ input_style = dict(
     border_width="1px", 
     padding="1em", 
     box_shadow=shadow,
+    width="220px",
 
 )
 button_style = dict(

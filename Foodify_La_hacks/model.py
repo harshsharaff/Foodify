@@ -60,7 +60,6 @@ def get_intial_request(user_input_str: str):
 
 	if (starting <= 0):
 		ai_response = generate_with_retry(model, starting_prompt).text
-		print(ai_response)
 		user_input = user_input_str
 		story_text = ai_response + "\n\n" + user_input
 		starting += 1
@@ -69,7 +68,7 @@ def get_intial_request(user_input_str: str):
 	story_text += "\n\n" + user_input_str
 
 	ai_response = generate_with_retry(model, continuation_prompt.format(story_text=story_text)).text
-	pprint(ai_response)
-	
+	#pprint(ai_response)
+
 	story_text += "\n\n" + ai_response
 	return ai_response
